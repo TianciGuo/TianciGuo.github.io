@@ -1,4 +1,4 @@
-#(()=>{var I=document.querySelector(".trm-typed-text"),u=window.ASYNC_CONFIG.typed_text||[];function y(i,e){if(!i||!Array.isArray(e)||Array.isArray(e)&&!e.length)return;let T=100,A=3e3,o=0,c=1,n=o,r=0,t=0,s;l();function l(){s=setInterval(a,T)}function a(){let d=e[r];n==o?(t++,t==d.length&&(n=c,clearInterval(s),setTimeout(l,A))):n==c&&(t--,t==0&&f());let p=d.substring(0,t);i.textContent=p}function f(){t=0,n=o,r++,r==e.length&&(r=0)}}y(I,u);window.ASYNC_CONFIG.swup&&document.addEventListener("swup:contentReplaced",function(){y(document.querySelector(".trm-typed-text"),u)});})();
+/* #(()=>{var I=document.querySelector(".trm-typed-text"),u=window.ASYNC_CONFIG.typed_text||[];function y(i,e){if(!i||!Array.isArray(e)||Array.isArray(e)&&!e.length)return;let T=100,A=3e3,o=0,c=1,n=o,r=0,t=0,s;l();function l(){s=setInterval(a,T)}function a(){let d=e[r];n==o?(t++,t==d.length&&(n=c,clearInterval(s),setTimeout(l,A))):n==c&&(t--,t==0&&f());let p=d.substring(0,t);i.textContent=p}function f(){t=0,n=o,r++,r==e.length&&(r=0)}}y(I,u);window.ASYNC_CONFIG.swup&&document.addEventListener("swup:contentReplaced",function(){y(document.querySelector(".trm-typed-text"),u)});})();
 (()=>{
   // 获取页面中第一个具有 class 名为 "trm-typed-text" 的元素
   var I = document.querySelector(".trm-typed-text"),
@@ -62,4 +62,4 @@
   window.ASYNC_CONFIG.swup && document.addEventListener("swup:contentReplaced", function() {
     y(document.querySelector(".trm-typed-text"), u);
   });
-})();
+})(); */
