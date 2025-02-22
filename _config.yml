@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -105,4 +105,19 @@ theme: async
 deploy:
   type: git
   repository: git@github.com:TianciGuo/TianciGuo.github.io.git
-  branch: master
+  branch: main
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+
+valine:
+  appId: aP4mioUQS2WkYByNq79nhy65-gzGzoHsz # leancloud application app id
+  appKey: 68jAvfHjwRLR8fl6w0jpAu8m # leancloud application app key
+  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  bg: # valine background
+  visitor: false
+  option:

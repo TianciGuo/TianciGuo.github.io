@@ -3,20 +3,20 @@ open_graph: true
 
 # User info
 user:
-  name: ThemeAsync
-  first_name: Theme
-  last_name: Async
-  email: 
-  domain: 站点域名
-  avatar: /img/avatar.jpg
-  describe: 网站简介。
+  name: Tianci's Blog
+  first_name: Tianci
+  last_name: Guo
+  email: 458989810@qq.com 
+  domain: https://tianciguo.github.io/ 
+  avatar: /img/avatar.jpg 
+  describe: 网站简介:个人收藏
   ruleText: 暂不接受个人博客以外的友链申请，确保您的网站内容积极向上，文章至少30篇，原创70%以上，部署HTTPS。
 
 # Configure the icon information of the site
 favicon:
-  logo: /img/favicon.svg
-  icon16: /img/favicon.svg
-  icon32: /img/favicon.svg
+  logo: /img/panda.svg
+  icon16: /img/panda.svg
+  icon32: /img/panda.svg
   appleTouchIcon: 
   webmanifest:
   visibilitychange: false
@@ -95,16 +95,36 @@ top_bars:
     url: /
   - title: menu.archives
     url: /archives/
+    children:
+      - title: 标签
+        url: /tags/
+      - title: 分类
+        url: /categories/
+  - title: menu.links
+    url: /links/
+  - title: menu.about
+    url: /about/
+  # - title: 自定义
+  #   url: /customize_page/
+  - title: gallery
+    url: /gallery/
+	# - title: 日志
+	# 	url: https://hexo-theme-async.imalun.com/guide/change-log
+	# 	noswup: true
 
 # Banner settings
+
 banner:
-  use_cover: false
 	danmu: 
-		enable: false
-		el: .trm-banner
+		enable: true
+		avatar: true
+		delayRange: 5000
+		speed: 80
+
   default:
     type: img
-    bgurl: /img/banner.png
+    #bgurl: /img/banner.png
+    bgurl: /img/mountains-55067_640.png
     bannerText: Hi my new friend!
     position: top
     fit: cover
@@ -127,21 +147,31 @@ banner:
 
 # Sidebar settings
 sidebar:
-  typedTextPrefix: I`m
-  typedText: 
+  typedTextPrefix: /
+  typedText: ["但是太阳，他每时每刻都是夕阳也都是旭日。","当他熄灭着走下山去,收尽苍凉残照之际，正是他在另一面燃烧着爬上山巅布散烈烈朝辉之时。","那一天，我也将沉静着走下山去，扶着我的拐杖。","有一天，在某一处山洼里，势必会跑上来一个欢蹦的孩子，抱着他的玩具。","当然，那不是我。","但是，那不是我吗?"]
+  
   info: 
-    - key: sidebar.residence
-      val: Mars
+    - key: Residence
+      val: Planet B-612
+    - key: Birthday
+      val: May 4, 2002
+    - key: College
+      val: CUG
+
   social:
     - name: Github
       icon: fab fa-github
-      url: https://github.com
+      url: https://github.com/TianciGuo/TianciGuo.github.io
+    - name: QQ
+      icon: fab fa-qq
+      url: https://user.qzone.qq.com/2769669830/main
+
 
 # About page settings
 about:
-	insert: none # before | after | none
-  title: 如果一切都是镜花水月，那就让这万物走向终结。如果一切皆是命中注定，那就让这世界消失殆尽。
-  introduction: 大家好，我是 <strong>Async</strong>，很高兴您能在浩瀚如烟的互联网世界里发现这个博客，更感谢您能够饶有兴致地浏览这个页面。建立这个 Blog 是出于兴趣爱好，我将在此分会分享一些学习笔记，可能还会分享少许图片、视频以及其他有趣东西的链接。
+	insert: before # before | after | none
+  title: 同是天涯沦落人，相逢何必曾相识
+  introduction: 大家好，我是 <strong>Tianci</strong>，很高兴您能在浩瀚如烟的互联网世界里发现这个博客。建立这个 Blog 是出于兴趣爱好。本人新手菜鸟，希望记录一些学习笔记，学习搭建属于自己的个人主页。如果有幸被您发现，请留下您来过的痕迹。
   blog: 
     <ul class="trm-list">
       <li>程序：Hexo </li>
@@ -164,9 +194,9 @@ footer:
   copyrightYear:
   # 
   live_time:
-    enable: false
+    enable: true
     prefix: footer.tips
-    start_time: 04/10/2022 17:00:00
+    start_time: 03/20/2024 17:00:00
   #
   custom_text:
 
@@ -176,10 +206,12 @@ footer:
 # If enable true, reward would be displayed in every posts and pages by default.
 # You can show or hide reward in a specific page throuth `reward: true | false` in Front Matter.
 reward:
-  enable: false
-  comment: reward.comment
+  enable: true
+  comment: 同是天涯沦落人，相逢何必曾相识
   # url:
-  methods:
+  methods: 
+    - name: 微信
+      path: /picture/mm_facetoface_collect_qrcode_1724688968040.png
 
 # Article table of contents
 toc:
@@ -255,7 +287,7 @@ comment:
     mapping: pathname
     reactions-enabled: 1
     emit-metadata: 0
-    lang: zh-CN
+    lang: en
     theme: 
       light: light
       dark: transparent_dark
@@ -266,7 +298,7 @@ theme:
   default: style-light # style-light style-dark
 
 # Service Worker
-sw: false
+sw: true
 
 # Post wordcount
 # https://github.com/willin/hexo-wordcount
@@ -286,18 +318,23 @@ katex:
   options: {}
 
 # Blog search
+# search:
+  # enable: false
+  # type: engine #local engine
+  # href: 'https://www.google.com/search?q=site:'
+  # # href: "https://www.baidu.com/s?wd=site:"
+  # # href: "https://www.bing.com/search?q=site:"
+  # domain: 
 search:
-  enable: false
-  type: engine #local engine
-  href: 'https://www.google.com/search?q=site:'
-  # href: "https://www.baidu.com/s?wd=site:"
-  # href: "https://www.bing.com/search?q=site:"
-  domain: 
+  enable: true
+  type: engine
+  href: "https://www.baidu.com/s?wd=site:"
+  domain:
 
 # Think of swup as being pjax on steroids. The concepts are similar to those used in barba.js or other transition libraries.
 # https://swup.js.org/
 # Whether swup is enabled
-swup: false
+swup: true
 
 # Datetime formatting
 datetime_foramt:
@@ -395,3 +432,5 @@ not_found:
 	path: /
 	name: not_found.name
 	text: not_found.text
+
+# <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
